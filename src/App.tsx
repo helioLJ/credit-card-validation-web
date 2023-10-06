@@ -37,7 +37,7 @@ export default function App() {
 
   return (
     <>
-      <p className="text-center font-sans absolute top-16 left-1/2 transform -translate-x-1/2 -translate-y-1/2">Use this <a className="text-blue-500" href="https://www.creditcardvalidator.org/generator">Fake Credit Card Number Generator</a></p> 
+      <p className="text-center font-sans absolute top-16 left-1/2 transform -translate-x-1/2 -translate-y-1/2">Use this <a className="text-blue-500" target="_blank" href="https://www.creditcardvalidator.org/generator">Fake Credit Card Number Generator</a></p> 
       <form className="relative bg-zinc-100 font-sans h-[500px] w-full min-w-[200px] flex flex-col gap-4 p-8 pt-40 rounded-md shadow-lg" onSubmit={handleSubmit(onSubmit)}>
         <DynamicVisualCard watch={watch} />
 

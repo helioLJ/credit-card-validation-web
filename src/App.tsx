@@ -1,6 +1,5 @@
 import { useState } from "react"
 import { useForm } from "react-hook-form"
-import { animated, useSpring, useTransition } from '@react-spring/web'
 import { CardNumberInput } from "./components/CardNumberInput"
 import { ExpiryDateInput } from "./components/ExpiryDateInput"
 import { CvvInput } from "./components/CvvInput"
@@ -9,18 +8,6 @@ import { DynamicVisualCard } from "./components/DynamicVisualCard"
 
 export default function App() {
   const [status, setStatus] = useState<{ code: number, message: string }>({ code: 0, message: "" })
-
-  const buttonSpring = useSpring({
-    width: status.code === 200 ? '100%' : '0%', 
-    config: { duration: 250 },
-  });
-
-  const transitionProps = useTransition(true, {
-    from: { opacity: 0 },
-    enter: { opacity: 1 },
-    leave: { opacity: 0 },
-  });
-
 
   const {
     register,
